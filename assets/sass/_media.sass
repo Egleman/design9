@@ -1,12 +1,12 @@
-$sizes: ("xs":0px, "sm":0px, "md":0px, "lg":0px, "xl":0px)
-  
+$sizes: ("xs":413px, "sm":601px, "md":800px, "lg":1013px, "xl":1201px)
+
 @mixin media($media)
   @each $size, $resolution in $sizes
     @if $media == $size
       @media (max-width: $resolution)
         @content
-  
-  
+
+
 // Универсальный media по max-width
 @mixin mediaMax($size)
   @media (max-width: $size + px)

@@ -1,0 +1,17 @@
+version: '2.4'
+networks:
+   design9_network:
+      driver: bridge
+services:
+   design9:
+      container_name: design9
+      build:
+         context: ./
+         dockerfile: Dockerfile
+      ports:
+         - '3005:5173'
+      volumes:
+         - ./:/app
+      tty: true
+      networks:
+         - design9_network
